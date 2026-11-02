@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Run'){
       steps{
-        sh 'java javahello.java'
+        sh 'java javahello'
       }
     }
   }
