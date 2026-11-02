@@ -1,7 +1,7 @@
 pipeline{
   agent any
   environment{
-    Image_Name = "testdockerhub0123/JavaJenkins:1.0"
+    Image_Name = 'testdockerhub0123/JavaJenkins:1.0'
   }
   stages{
     stage('Compile'){
@@ -23,5 +23,6 @@ pipeline{
       steps{
         sh 'docker push $Image_Name'
       }
+    }
   }
 }
