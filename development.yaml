@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pipeline
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: testdockerhub0123/javajenkins:1.0
+        name: pipeline
+        resources: {}
+      restartPolicy: Never
+status: {}
