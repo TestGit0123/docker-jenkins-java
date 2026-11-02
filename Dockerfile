@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25.0.5_8-jre-noble
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY javahello.java .
 CMD ["java","javahello.java"]
