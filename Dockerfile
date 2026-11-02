@@ -1,4 +1,5 @@
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY javahello.java .
-CMD ["java","javahello.java"]
+RUN javac javahello.java
+CMD ["java","javahello"]

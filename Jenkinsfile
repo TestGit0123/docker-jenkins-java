@@ -19,6 +19,11 @@ pipeline{
         sh 'docker build -t $Image_Name .'
       }
     }
+    stage('Docker Image Run'){
+      steps{
+        sh 'docker run --rm $Image_Name'
+      }
+    }
     stage('Docker Login'){
       steps{
         withCredentials([
