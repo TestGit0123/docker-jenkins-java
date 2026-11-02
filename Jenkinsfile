@@ -1,7 +1,7 @@
 pipeline{
   agent any
   environment{
-    Image_Name = 'testdockerhub0123/JavaJenkins:1.0'
+    Image_Name = "testdockerhub0123/JavaJenkins:1.0"
   }
   stages{
     stage('Compile'){
