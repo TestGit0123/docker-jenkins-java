@@ -9,7 +9,7 @@ pipeline{
         sh 'javac javahello.java'
       }
     }
-    stage('Run'){
+    stage('Run Program'){
       steps{
         sh 'java javahello'
       }
