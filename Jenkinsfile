@@ -2,6 +2,7 @@ pipeline{
   agent any
   environment{
     Image_Name = 'testdockerhub0123/javajenkins:1.0'
+    job_name = 'pipeline'
   }
   stages{
     stage('Compile'){
@@ -43,5 +44,9 @@ pipeline{
         sh 'docker push $Image_Name'
       }
     }
+    stage('Creating Kubernetes Pod'){
+      steps{
+        sh 'kubectl apply -f development.yaml'
+        sh 'kubectl logs job/$job_name'}}
   }
 }
