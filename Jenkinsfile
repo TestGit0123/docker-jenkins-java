@@ -46,7 +46,7 @@ pipeline{
     }
     stage('Creating Kubernetes Pod'){
       steps{
-        sh 'minikube kubectl -- apply -f development.yaml'
-        sh 'minikube kubectl -- logs job/$job_name'}}
+        sh 'kubectl apply -f development.yaml'
+        sh 'kubectl logs job/$job_name'}}
   }
 }
